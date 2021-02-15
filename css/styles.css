@@ -13,8 +13,9 @@ body{
 }
 /**Globales**/
 .contenedor{
-    max-width: 120rem;
+    /*max-width: 120rem;*/
     margin: 0 auto;
+    max-width: 90%;
 }
 h1,h2,h3{font-family: 'PT Sans', sans-serif;}
 h1{
@@ -42,6 +43,21 @@ img{
 }
 .no-margin{
     margin: 0;
+}
+
+/**Grid**/
+@media (min-width: 768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .grid p{
+        margin: 0;
+    }
 }
 
 /**Botones**/
@@ -133,7 +149,6 @@ img{
     flex-wrap: nowrap muestra los elementos en la misma linea se encojeran si el contenedor
     es mas pequeño que su tamaño, mientras que flex-wrap: wrap los elemnetos del contenedor
     haran un salto de linea si el tamaño de los elementos sobrepasa el contenedor*/
-    max-width: 90%;
 }
 .blog,
 .cursos{
