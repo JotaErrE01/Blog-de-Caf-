@@ -46,7 +46,7 @@ img{
 }
 
 /**Grid**/
-@media (min-width: 768px){
+@media (min-width: 800px){
     .grid{
         display: flex;
         justify-content: space-between;
@@ -88,7 +88,7 @@ img{
 }
 
 /**Header**/
-@media(min-width:768px){
+@media(min-width:800px){
     .barra{
         display: flex;
         justify-content: space-between;
@@ -124,7 +124,7 @@ img{
 .navegacion a:hover{
     color: brown;
 }
-@media (min-width: 768px){
+@media (min-width: 800px){
     .navegacion a{
         display: inline;/*colocas uno frente a otro, el elemento solo ocupa el espacio necesario, a diferencia del display block*/
         margin-right: 2rem;
@@ -138,7 +138,7 @@ img{
 .texto-header{
     color: #ffffff;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
     font-size: 2.2rem;
 }
 
@@ -163,7 +163,7 @@ img{
     esten en un mismo contenedor dos secciones difrentes, en este
     caso se encontraban en el mismo contenedor main y aside*/
 }
-@media (min-width: 768px){
+@media (min-width: 800px){
     .contenido-principal {
         justify-content: space-between;
         max-width: 75%;
