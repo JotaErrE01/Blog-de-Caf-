@@ -1,67 +1,105 @@
 html {
     box-sizing: border-box;
-    font-size: 62.5%;/**1rem = 10 px**/
+    font-size: 62.5%;
+    /**1rem = 10 px**/
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
+
+
 /*Definimos el body*/
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
 }
+
+
 /**Globales**/
-.contenedor{
+
+.contenedor {
     /*max-width: 120rem;*/
     margin: 0 auto;
     max-width: 90%;
 }
-h1,h2,h3{font-family: 'PT Sans', sans-serif;}
-h1{
+
+h1,
+h2,
+h3 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
     font-size: 4.8rem;
 }
-h2{
+
+h2 {
     font-size: 4rem;
 }
-h3{
+
+h3 {
     font-size: 3.2rem;
 }
-h4{
+
+h4 {
     font-size: 2.8rem;
 }
+
+
 /**para que las imagenes se adapten en su contenedor**/
-img{
+
+img {
     max-width: 100%;
 }
+
+
 /**Utilidades**/
+
+
 /*.ajuste{
     max-width: 60%;
 }*/
-.centrar-texto{
+
+.centrar-texto {
     text-align: center;
 }
-.no-margin{
+
+.no-margin {
     margin: 0;
 }
 
+
 /**Grid**/
-@media (min-width: 800px){
-    .grid{
+
+@media (min-width: 768px) {
+    .grid {
         display: flex;
         justify-content: space-between;
         font-size: 1.5rem;
     }
-    .columnas-6{
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-6 {
         flex: 0 0 calc(50% - 1rem);
     }
-    .grid p{
+    .grid p {
         margin: 0;
+    }
+    .columnas-8 {
+        flex-basis: calc(66.6% - 1rem);
     }
 }
 
+
 /**Botones**/
-.boton{
+
+.boton {
     display: block;
     color: white;
     font-weight: 600;
@@ -72,184 +110,240 @@ img{
     text-transform: uppercase;
     text-align: center;
 }
-.boton-primario{
+
+.boton-primario {
     background-color: black;
     margin-bottom: 1rem;
 }
-.btn-secundario{
+
+.btn-secundario {
     background-color: #784d3c;
     margin-left: 1rem;
     margin-right: 1rem;
 }
-@media (min-width: 460px){
-    .boton{
+
+@media (min-width: 460px) {
+    .boton {
         display: inline-block;
     }
 }
 
+
 /**Header**/
-@media(min-width:800px){
-    .barra{
+
+@media(min-width:768px) {
+    .barra {
         display: flex;
         justify-content: space-between;
         margin-bottom: 15rem;
     }
 }
-.site-header{
+
+.site-header {
     background-image: url(../img/anuncio4.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;/*cubra el largo y el ancho*/
+    background-size: cover;
+    /*cubra el largo y el ancho*/
     height: 60rem;
 }
-.site-header a{
+
+.site-header a {
     color: #ffffff;
     text-decoration: none;
 }
-.site-header h1{
+
+.site-header h1 {
     font-weight: 400;
     text-align: center;
 }
-.site-header span{
+
+.site-header span {
     font-weight: 700;
 }
+
+
 /**Navegacion**/
-.navegacion a{
+
+.navegacion a {
     text-align: center;
-    display: block;/*para que cada elemento ocupe su propia linea*/
+    display: block;
+    /*para que cada elemento ocupe su propia linea*/
     font-size: 1.8rem;
     font-weight: 600;
     margin-top: 2rem;
 }
-.navegacion a:hover{
+
+.navegacion a:hover {
     color: brown;
 }
-@media (min-width: 800px){
-    .navegacion a{
-        display: inline;/*colocas uno frente a otro, el elemento solo ocupa el espacio necesario, a diferencia del display block*/
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline;
+        /*colocas uno frente a otro, el elemento solo ocupa el espacio necesario, a diferencia del display block*/
         margin-right: 2rem;
     }
-    .navegacion a:last-of-type{
+    .navegacion a:last-of-type {
         margin: 0%;
     }
 }
 
+
 /**Header texto**/
-.texto-header{
+
+.texto-header {
     color: #ffffff;
     text-align: center;
     margin-top: 5rem;
     font-size: 2.2rem;
 }
 
+
 /**Contenido Principal**/
-.contenido-principal{
+
+.contenido-principal {
     display: flex;
-    flex-wrap: wrap;/*
+    flex-wrap: wrap;
+    /*
     flex-wrap: nowrap muestra los elementos en la misma linea se encojeran si el contenedor
     es mas pequeño que su tamaño, mientras que flex-wrap: wrap los elemnetos del contenedor
     haran un salto de linea si el tamaño de los elementos sobrepasa el contenedor*/
 }
+
 .blog,
-.cursos{
+.cursos {
     /*flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 100%;*/
     /**o**/
     flex: 0 0 100%;
 }
-.cursos{
-    order: -1;/*para que cursos vaya primero, siempre y cuando 
+
+.cursos {
+    order: -1;
+    /*para que cursos vaya primero, siempre y cuando 
     esten en un mismo contenedor dos secciones difrentes, en este
     caso se encontraban en el mismo contenedor main y aside*/
 }
-@media (min-width: 800px){
+
+@media (min-width: 768px) {
     .contenido-principal {
         justify-content: space-between;
         max-width: 75%;
     }
-    .blog{
+    .blog {
         flex-basis: 66.6%;
     }
-    .cursos{
+    .cursos {
         flex-basis: calc(34.4% - 4rem);
         order: 1;
     }
 }
-.entrada-blog{
+
+.entrada-blog {
     margin-bottom: 2rem;
     border-bottom: 1px solid #333232;
 }
-.entrada-blog:last-of-type{
+
+.entrada-blog:last-of-type {
     border: none;
 }
 
+
 /**Cursos sidebar**/
-.cursos-lista{
+
+.cursos-lista {
     padding: 0;
     list-style: none;
 }
-.curso{
+
+.curso {
     padding-bottom: 3rem;
     border-bottom: 1px solid burlywood;
 }
-.curso:last-of-type{
+
+.curso:last-of-type {
     border: none;
 }
-.cursos{
+
+.cursos {
     padding: 0;
     margin-top: 8rem;
     max-height: 85rem;
     border: 2px solid burlywood;
     text-align: center;
-    
 }
-.separation{
+
+.separation {
     max-width: 99.8%;
 }
-.cursos h2{
+
+.cursos h2 {
     padding-top: 0;
     border-bottom: 2px solid burlywood;
     background-color: rgb(119, 80, 30);
     color: white;
 }
-.curso p{
-    font-family: 'PT Sans',sans-serif;/*TIPO DE LETRA*/
+
+.curso p {
+    font-family: 'PT Sans', sans-serif;
+    /*TIPO DE LETRA*/
     font-weight: 700;
     font-size: 2rem;
 }
-.curso span{
+
+.curso span,
+p.descripcion
+/*p.descripcion hace el elemeno más específico*/
+
+{
     font-weight: 400;
 }
 
+
 /**Footer**/
-.site-footer{
+
+.site-footer {
     background-color: black;
     padding: 1rem;
     margin-top: 3.5rem;
 }
-.site-footer .contenedor .barra{
+
+.site-footer .contenedor .barra {
     margin: 0;
     align-items: center
 }
-.site-footer p{
+
+.site-footer p {
     color: #ffffff;
     text-decoration: none;
     font-weight: 400;
-    text-align: center; 
+    text-align: center;
     font-size: 3rem;
     font-family: 'PT Sans', sans-serif;
 }
-.site-footer a{
+
+.site-footer a {
     text-decoration: none;
 }
-.site-footer a:hover{
+
+.site-footer a:hover {
     color: brown;
 }
-.site-footer a{
+
+.site-footer a {
     color: white;
 }
+
+.espacio {
+    padding-top: 4rem;
+}
+
+
 /**Optional design**/
+
+
 /*
 .entrada-blog{
     display: flex;
