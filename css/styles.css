@@ -155,8 +155,15 @@ img {
     }
 }
 
-.site-header {
+.webp .site-header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .site-header {
     background-image: url(../img/anuncio4.jpg);
+}
+
+.site-header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -434,3 +441,41 @@ o si al campo le quitas formilario-contacto(campo esta 5 clases mas arriba xd) *
 .entrada-blog p{
     margin-top: 0%;
 }/*
+
+
+/* width */
+
+
+/*
+::-webkit-scrollbar {
+    width: 10px;
+}
+*/
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(82, 45, 2);
+    border-radius: .3rem;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(70, 38, 2);
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: .3rem;
+    /*display: none;*/
+}

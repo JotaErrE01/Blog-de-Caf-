@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciption" content="Página Web de blog de Café">  
     <title>Blog de Café</title>
+    
+    <!--PREFETCH-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    
+    <!--PRELOAD-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="/css/normalize.css" as="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
+    
+    <link rel="preload" href="/css/styles.css" as="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    
 </head>
 
 <body>
@@ -35,12 +46,17 @@
         <!--contenedor-->
     </header>
     <div class="contenido-principal contenedor">
+
         <main class="blog">
             <h2>Nuestro Blog</h2>
+
             <article class="entrada-blog">
                 <!--Article es un elemento que se explica por si solo sin depender de nadie mas-->
                 <div class="imagen">
-                    <img src="./img/img3.jpg" alt="Café 2">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/img3.jpg" alt="Café 2">
+                    </picture>
                 </div>
                 <!--Imagen-->
                 <div class="contenido-blog">
@@ -52,9 +68,10 @@
                     <a href="entrada.html" class="boton boton-primario">Leer Entrada</a>
                 </div>
             </article>
+
             <article class="entrada-blog">
                 <div class="imagen">
-                    <img src="./img/img4.jpg" alt="Café 2">
+                    <img loading="lazy" src="./img/img4.jpg" alt="Café 2">
                 </div>
                 <!--Imagen-->
                 <div class="contenido-blog">
@@ -66,9 +83,10 @@
                     <a href="entrada.html" class="boton boton-primario">Leer Entrada</a>
                 </div>
             </article>
+
             <article class="entrada-blog">
                 <div class="imagen">
-                    <img src="./img/img2.jpg" alt="Café 2">
+                    <img loading="lazy" src="./img/img2.jpg" alt="Café 2">
                 </div>
                 <!--Imagen-->
                 <div class="contenido-blog">
@@ -80,7 +98,9 @@
                     <a href="entrada.html" class="boton boton-primario">Leer Entrada</a>
                 </div>
             </article>
+
         </main>
+
         <aside class="cursos">
             <!--para colocar contenido adicional-->
             <div class="separation">
@@ -117,6 +137,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 
 </html>
