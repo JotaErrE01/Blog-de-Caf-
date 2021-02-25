@@ -397,6 +397,10 @@ textarea {
     justify-content: flex-end;
 }
 
+.Titulo__blog {
+    margin: 2rem auto;
+}
+
 
 /*este de abajo solo funciona si lo describes al mismo nivel que el campo
 o si al campo le quitas formilario-contacto(campo esta 5 clases mas arriba xd) */
