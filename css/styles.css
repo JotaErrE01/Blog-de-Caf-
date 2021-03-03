@@ -408,6 +408,29 @@ textarea {
     margin: 2rem auto;
 }
 
+.centrar-text{
+    text-align: center;
+}
+.error{
+    background-color: rgba(252, 5, 5, 0.883);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin: 0 auto;
+}
+.envio{
+    background-color: rgba(8, 156, 8, 0.931);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin: 0 auto;
+}
 
 /*este de abajo solo funciona si lo describes al mismo nivel que el campo
 o si al campo le quitas formilario-contacto(campo esta 5 clases mas arriba xd) */
